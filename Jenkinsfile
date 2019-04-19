@@ -1,14 +1,14 @@
 pipeline {
-  agent {
-    label 'docker' 
-  }
+  // agent {
+  //   label 'docker' 
+  // }
 
   stages {
     stage('Docker node test') {
       agent {
         docker {
           // Set both label and image
-          label 'docker'
+          // label 'docker'
           image 'node:10-alpine'
           args '--name docker-node -p 3000:3000' // list any args
         }
