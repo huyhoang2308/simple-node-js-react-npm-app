@@ -12,15 +12,16 @@ pipeline {
           args '--name docker-node' // list any args
         }
       }
+  }
+}
       steps {
         // Steps run in node:7-alpine docker container on docker slave
         sh 'node --version'
       }
-    }
     stages {
         stage('Build') { 
             steps {
-                sh 'npm install' 
+                sh 'npm install'    
             }
         }
     }
