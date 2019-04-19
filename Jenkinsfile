@@ -2,6 +2,7 @@ pipeline {
   agent {
     label 'docker' 
   }
+
   stages {
     stage('Docker node test') {
       agent {
@@ -12,13 +13,13 @@ pipeline {
           args '--name docker-node' // list any args
         }
       }
-  }
-}
       steps {
         // Steps run in node:7-alpine docker container on docker slave
         sh 'node --version'
       }
-    stages {
+    }
+  }
+  stages {
         stage('Build') { 
             steps {
                 sh 'npm install'    
