@@ -18,13 +18,13 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('Test') {
-            steps {
-                echo 'test step'
-                sh 'npm run test:ci'
-                sh 'npm run test-truffle:ci'
-            }
-        }
+        // stage('Test') {
+        //     steps {
+        //         echo 'test step'
+        //         sh 'npm run test:ci'
+        //         sh 'npm run test-truffle:ci'
+        //     }
+        // }
         stage('Generate app builds') {
             steps {
                 echo 'Generate app builds step'
